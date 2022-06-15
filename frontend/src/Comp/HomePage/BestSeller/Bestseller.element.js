@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const BestSellerContainer = styled.div`
   width: 100%;
+  margin: 50px 0px;
 `;
 export const BestSellerHeadDiv = styled.div`
   display: flex;

@@ -32,6 +32,7 @@ const SliderDiv = styled.div`
   max-width: 98%;
   align-items: left;
   margin-left: 5px;
+  margin-bottom: 50px;
 `;
 
 const SlideImg = styled.img`

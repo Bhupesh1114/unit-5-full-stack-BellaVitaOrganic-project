@@ -5,7 +5,7 @@ export const HomePageContainer = styled.div`
 `;
 
 export const SliderBottomDiv = styled.div`
-  margin-top: 50px;
+  margin-top: 20px;
 `;
 
 export const SliderBottomImg = styled.img`

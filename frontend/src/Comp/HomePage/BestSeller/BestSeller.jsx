@@ -1,26 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
+import axios from "axios";
+import { AiTwotoneStar } from "react-icons/ai";
+
 import {
+  BestMainDiv,
   BestSellerContainer,
   BestSellerHeadDiv,
   BestSellerHeading,
   BestSellerHeadingLine,
   BestSellerProduct,
   BestSellerSlider,
+  PriceAndratingDiv,
+  PriceDiv,
+  PriceP,
   ProductButton,
   ProductDes,
   ProductImg,
   ProductTitle,
+  ProductTitleDesDiv,
+  RatingDiv,
+  RatingP,
+  StkPriceP,
 } from "./Bestseller.element";
+import { useEffect } from "react";
 
 const BestSeller = () => {
+  const [bdata, setBData] = useState([]);
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 3,
+    slidesToScroll: 4,
   };
+
+  useEffect(() => {
+    axios.get("http://localhost:5500/bestSellerData").then(({ data }) => {
+      console.log(data);
+      setBData(data);
+    });
+  }, []);
+
   return (
     <BestSellerContainer>
       <BestSellerHeadDiv>
@@ -31,76 +52,30 @@ const BestSeller = () => {
 
       <BestSellerSlider>
         <Slider {...settings}>
-          <BestSellerProduct>
-            <ProductImg src="https://cdn.shopify.com/s/files/1/0054/6665/2718/products/Exfoliate-01_1_700x.jpg?v=1655010286" />
-            <ProductTitle>
-              Exfoliate Face And Body Scrub Grit ,75gm
-            </ProductTitle>
-            <ProductDes>
-              Gentle Exfoliation, Nourishing & Skin Brightening
-            </ProductDes>
-            <ProductButton>ADD TO CART</ProductButton>
-          </BestSellerProduct>
-          <BestSellerProduct>
-            <ProductImg src="https://cdn.shopify.com/s/files/1/0054/6665/2718/products/Exfoliate-01_1_700x.jpg?v=1655010286" />
-            <ProductTitle>
-              Exfoliate Face And Body Scrub Grit ,75gm
-            </ProductTitle>
-            <ProductDes>
-              Gentle Exfoliation, Nourishing & Skin Brightening
-            </ProductDes>
-            <ProductButton>ADD TO CART</ProductButton>
-          </BestSellerProduct>
-          <BestSellerProduct>
-            <ProductImg src="https://cdn.shopify.com/s/files/1/0054/6665/2718/products/Exfoliate-01_1_700x.jpg?v=1655010286" />
-            <ProductTitle>
-              Exfoliate Face And Body Scrub Grit ,75gm
-            </ProductTitle>
-            <ProductDes>
-              Gentle Exfoliation, Nourishing & Skin Brightening
-            </ProductDes>
-            <ProductButton>ADD TO CART</ProductButton>
-          </BestSellerProduct>
-          <BestSellerProduct>
-            <ProductImg src="https://cdn.shopify.com/s/files/1/0054/6665/2718/products/Exfoliate-01_1_700x.jpg?v=1655010286" />
-            <ProductTitle>
-              Exfoliate Face And Body Scrub Grit ,75gm
-            </ProductTitle>
-            <ProductDes>
-              Gentle Exfoliation, Nourishing & Skin Brightening
-            </ProductDes>
-            <ProductButton>ADD TO CART</ProductButton>
-          </BestSellerProduct>
-          <BestSellerProduct>
-            <ProductImg src="https://cdn.shopify.com/s/files/1/0054/6665/2718/products/Exfoliate-01_1_700x.jpg?v=1655010286" />
-            <ProductTitle>
-              Exfoliate Face And Body Scrub Grit ,75gm
-            </ProductTitle>
-            <ProductDes>
-              Gentle Exfoliation, Nourishing & Skin Brightening
-            </ProductDes>
-            <ProductButton>ADD TO CART</ProductButton>
-          </BestSellerProduct>
-          <BestSellerProduct>
-            <ProductImg src="https://cdn.shopify.com/s/files/1/0054/6665/2718/products/Exfoliate-01_1_700x.jpg?v=1655010286" />
-            <ProductTitle>
-              Exfoliate Face And Body Scrub Grit ,75gm
-            </ProductTitle>
-            <ProductDes>
-              Gentle Exfoliation, Nourishing & Skin Brightening
-            </ProductDes>
-            <ProductButton>ADD TO CART</ProductButton>
-          </BestSellerProduct>
-          <BestSellerProduct>
-            <ProductImg src="https://cdn.shopify.com/s/files/1/0054/6665/2718/products/Exfoliate-01_1_700x.jpg?v=1655010286" />
-            <ProductTitle>
-              Exfoliate Face And Body Scrub Grit ,75gm
-            </ProductTitle>
-            <ProductDes>
-              Gentle Exfoliation, Nourishing & Skin Brightening
-            </ProductDes>
-            <ProductButton>ADD TO CART</ProductButton>
-          </BestSellerProduct>
+          {bdata.map((e) => {
+            return (
+              <BestMainDiv>
+                <BestSellerProduct>
+                  <ProductImg src={e.ImageUrl} />
+                  <ProductTitleDesDiv>
+                    <ProductTitle>{e.Title}</ProductTitle>
+                    <ProductDes>{e.Description}</ProductDes>
+                  </ProductTitleDesDiv>
+                  <PriceAndratingDiv>
+                    <PriceDiv>
+                      <PriceP>₹ {e.Price}</PriceP>
+                      <StkPriceP>₹ {e.StkPrice}</StkPriceP>
+                    </PriceDiv>
+                    <RatingDiv>
+                      <RatingP>{e.Rating}</RatingP>
+                      <AiTwotoneStar />
+                    </RatingDiv>
+                  </PriceAndratingDiv>
+                  <ProductButton>ADD TO CART</ProductButton>
+                </BestSellerProduct>
+              </BestMainDiv>
+            );
+          })}
         </Slider>
       </BestSellerSlider>
     </BestSellerContainer>

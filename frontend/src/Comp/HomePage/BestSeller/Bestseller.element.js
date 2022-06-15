@@ -24,9 +24,15 @@ export const BestSellerHeading = styled.p`
 
 export const BestSellerSlider = styled.div``;
 
+export const BestMainDiv = styled.div``;
+
 export const BestSellerProduct = styled.div`
-  width: 95%;
-  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  height: 398px;
+  border-radius: 0px 0px 5px 5px;
+  line-height: 10px;
+  margin: 10px;
 `;
 
 export const ProductImg = styled.img`
@@ -34,19 +40,57 @@ export const ProductImg = styled.img`
   height: 250px;
 `;
 
+export const ProductTitleDesDiv = styled.div`
+  margin: 0px 0px 0px 10px;
+`;
+
 export const ProductTitle = styled.p`
   font-size: 16px;
   font-weight: 600;
+  text-align: left;
 `;
 export const ProductDes = styled.p`
   font-size: 16px;
+  text-align: left;
 `;
 
+export const PriceAndratingDiv = styled.div`
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  margin: 0px 10px 0px 10px;
+`;
+export const PriceDiv = styled.div`
+  display: flex;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+`;
+
+export const PriceP = styled.p`
+  font-size: 16px;
+`;
+export const StkPriceP = styled.p`
+  text-decoration: line-through;
+  font-size: 16px;
+`;
+
+export const RatingDiv = styled.div`
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+`;
+
+export const RatingP = styled.p`
+  font-size: 16px;
+`;
 export const ProductButton = styled.button`
   font-size: 16px;
   background-color: #475d4b;
   padding: 10px;
-  width: 95%;
+  width: 100%;
   color: #fff;
   font-weight: 550;
   border-radius: 5px;

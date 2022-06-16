@@ -48,7 +48,7 @@ const BestSeller = () => {
 
   const handleAddToCart = () => {
     dispatch(
-      addProduct({ product, quantity, price: product.price * quantity })
+      addProduct({ product, quantity, price: product.Price * quantity })
     );
   };
 

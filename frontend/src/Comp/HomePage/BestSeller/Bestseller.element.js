@@ -28,9 +28,8 @@ export const BestSellerSlider = styled.div``;
 export const BestMainDiv = styled.div``;
 
 export const BestSellerProduct = styled.div`
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-  height: 398px;
+  border: 1px solid #e5f0da;
+  height: 450px;
   border-radius: 0px 0px 5px 5px;
   line-height: 10px;
   margin: 10px;
@@ -38,7 +37,11 @@ export const BestSellerProduct = styled.div`
 
 export const ProductImg = styled.img`
   width: 100%;
-  height: 250px;
+  height: 300px;
+  transition: all 0.4s ease-out;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 export const ProductTitleDesDiv = styled.div`
@@ -90,10 +93,11 @@ export const RatingP = styled.p`
 export const ProductButton = styled.button`
   font-size: 16px;
   background-color: #475d4b;
-  padding: 10px;
+  padding: 15px;
   width: 100%;
   color: #fff;
   font-weight: 550;
   border-radius: 5px;
   border: none;
+  cursor: pointer;
 `;

@@ -12,11 +12,11 @@ import SliderBottom from "./Images/SliderBottom.webp";
 import BCbottom1 from "./Images/BCbottom1.webp";
 import BCbottom2 from "./Images/BCbottom2.webp";
 import BCbottom3 from "./Images/BCbottom3.webp";
-import AppImage from "./Images/AppImage.png";
 import SpotLight from "./SpotLight/SpotLight";
 import FindSolutions from "./FindSolutions/FindSolutions";
 import MediaCoverAge from "./MediaCoverage/MediaCoverAge";
 import BellaCash from "./Bellacash/BellaCash";
+import AppComp from "./AppComp/AppComp";
 
 const HomePage = () => {
   return (
@@ -47,9 +47,7 @@ const HomePage = () => {
       <SliderBottomDiv>
         <SliderBottomImg src={BCbottom3} alt="" />
       </SliderBottomDiv>
-      <SliderBottomDiv>
-        <SliderBottomImg src={AppImage} alt="" style={{width: '100%'}} />
-      </SliderBottomDiv>
+      <AppComp />
     </HomePageContainer>
   );
 };

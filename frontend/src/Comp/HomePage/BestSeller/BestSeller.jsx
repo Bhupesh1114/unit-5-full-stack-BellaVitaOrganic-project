@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import Slider from "react-slick";
 import axios from "axios";
 import { AiTwotoneStar } from "react-icons/ai";
@@ -24,9 +25,12 @@ import {
   StkPriceP,
 } from "./Bestseller.element";
 import { useEffect } from "react";
+import { addProduct } from "../../../redux/AddTocart/AddToCart";
 
 const BestSeller = () => {
-  const [bdata, setBData] = useState([]);
+  const [product, setProduct] = useState([]);
+  const [quantity, setQuantity] = useState(1);
+  const dispatch = useDispatch();
   const settings = {
     dots: true,
     infinite: true,
@@ -38,9 +42,15 @@ const BestSeller = () => {
   useEffect(() => {
     axios.get("http://localhost:5500/bestSellerData").then(({ data }) => {
       console.log(data);
-      setBData(data);
+      setProduct(data);
     });
   }, []);
+
+  const handleAddToCart = () => {
+    dispatch(
+      addProduct({ product, quantity, price: product.price * quantity })
+    );
+  };
 
   return (
     <BestSellerContainer>
@@ -52,9 +62,9 @@ const BestSeller = () => {
 
       <BestSellerSlider>
         <Slider {...settings}>
-          {bdata.map((e) => {
+          {product.map((e) => {
             return (
-              <BestMainDiv>
+              <BestMainDiv key={e.id}>
                 <BestSellerProduct>
                   <ProductImg src={e.ImageUrl} />
                   <ProductTitleDesDiv>
@@ -71,7 +81,9 @@ const BestSeller = () => {
                       <AiTwotoneStar />
                     </RatingDiv>
                   </PriceAndratingDiv>
-                  <ProductButton>ADD TO CART</ProductButton>
+                  <ProductButton onClick={handleAddToCart}>
+                    ADD TO CART
+                  </ProductButton>
                 </BestSellerProduct>
               </BestMainDiv>
             );

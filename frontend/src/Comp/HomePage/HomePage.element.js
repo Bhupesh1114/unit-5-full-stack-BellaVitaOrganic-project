@@ -9,6 +9,6 @@ export const SliderBottomDiv = styled.div`
 `;
 
 export const SliderBottomImg = styled.img`
-  width: 95%;
+  width: 99%;
   border-radius: 10px;
 `;

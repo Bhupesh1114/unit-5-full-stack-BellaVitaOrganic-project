@@ -46,11 +46,11 @@ const BestSeller = () => {
     });
   }, []);
 
-  const handleAddToCart = () => {
-    dispatch(
-      addProduct({ product, quantity, price: product.Price * quantity })
-    );
-  };
+  // const handleAddToCart = () => {
+  //   dispatch(
+  //     addProduct({ product, quantity, price: product.Price * quantity })
+  //   );
+  // };
 
   return (
     <BestSellerContainer>
@@ -81,7 +81,17 @@ const BestSeller = () => {
                       <AiTwotoneStar />
                     </RatingDiv>
                   </PriceAndratingDiv>
-                  <ProductButton onClick={handleAddToCart}>
+                  <ProductButton
+                    onClick={() => {
+                      dispatch(
+                        addProduct({
+                          e,
+                          quantity,
+                          price: e.Price * quantity,
+                        })
+                      );
+                    }}
+                  >
                     ADD TO CART
                   </ProductButton>
                 </BestSellerProduct>

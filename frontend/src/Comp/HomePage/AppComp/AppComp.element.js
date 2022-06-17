@@ -22,7 +22,7 @@ export const AppContainerMidText = styled.p`
   font-weight: 700;
   color: #e5f0da;
   margin: auto;
-  margin-left: 450px;
+  margin-left: 750px;
   padding: 10px;
 `;
 export const AppContainerBottom = styled.div`

@@ -2,6 +2,7 @@ import React from "react";
 import "./information.css";
 import img from "./img/Bellavitaorganic.png";
 import { Link } from "react-router-dom";
+import { IoIosArrowBack } from "react-icons/io";
 
 export const Information = () => {
   return (
@@ -247,30 +248,30 @@ export const Information = () => {
 
           <div className="return_continueshpping_btn">
             <div className="returnbox">
-              <Link className="return" to="">
-                Return to cart
-              </Link>
+              <div className="return" to="">
+                <IoIosArrowBack />
+                <p>Return to cart</p>
+              </div>
             </div>
             <div>
               <button className="continue">Continue to shipping</button>
             </div>
           </div>
-
           <hr className="line" />
 
           <div className="policy">
-            <Link className="poly" to={""}>
+            <p className="poly" to={""}>
               Refund policy
-            </Link>
-            <Link className="poly" to={""}>
+            </p>
+            <p className="poly" to={""}>
               Shipping policy
-            </Link>
-            <Link className="poly" to={""}>
+            </p>
+            <p className="poly" to={""}>
               Privacy policy
-            </Link>
-            <Link className="poly" to={""}>
+            </p>
+            <p className="poly" to={""}>
               Terms of service
-            </Link>
+            </p>
           </div>
         </div>
 

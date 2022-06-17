@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const AppContainer = styled.div`
-  width: 100vw;
-  margin-top: 30px;
+  width: 100%;
   position: relative;
 `;
 export const AppContainerTop = styled.div`
@@ -54,7 +53,7 @@ export const AppMobileDiv = styled.div`
   margin-left: 150px;
 `;
 export const AppMobileImg = styled.img`
-  z-index: 2;
+  z-index: 1;
   transition: all 0.4s ease-out;
   &:hover {
     transform: scale(1.1);

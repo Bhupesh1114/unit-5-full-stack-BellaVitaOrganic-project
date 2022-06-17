@@ -1,5 +1,6 @@
 import styled from "styled-components";
 export const FindSDiv = styled.div`
+width: 100%;
   margin: 50px 0px;
 `;
 

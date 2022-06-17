@@ -1,6 +1,7 @@
 import styled from "styled-components";
 export const BellacashDiv = styled.div`
-  margin: 50px 0px;
+  width: 100%;
+  margin-top: 20px;
 `;
 
 export const BellaCHeadDiv = styled.div`
@@ -22,5 +23,4 @@ export const BellaCHeading = styled.p`
   color: #475d4b;
 `;
 
-export const BellaCashImg = styled.img`
-`
+export const BellaCashImg = styled.img``;

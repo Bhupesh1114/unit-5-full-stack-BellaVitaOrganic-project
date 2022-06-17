@@ -29,9 +29,8 @@ const ImgSlider = () => {
 export default ImgSlider;
 
 const SliderDiv = styled.div`
-  max-width: 98%;
+  max-width: 100%;
   align-items: left;
-  margin-left: 5px;
   margin-bottom: 50px;
 `;
 

@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const BestSellerContainer = styled.div`
   width: 100%;
-  margin: 50px 0px;
 `;
 export const BestSellerHeadDiv = styled.div`
   display: flex;
@@ -74,21 +73,25 @@ export const PriceDiv = styled.div`
 
 export const PriceP = styled.p`
   font-size: 16px;
+  font-weight: 600;
 `;
 export const StkPriceP = styled.p`
   text-decoration: line-through;
   font-size: 16px;
+  font-weight: 600;
 `;
 
 export const RatingDiv = styled.div`
   display: flex;
   align-items: center;
   text-align: center;
-  gap: 10px;
+  gap: 5px;
 `;
 
 export const RatingP = styled.p`
   font-size: 16px;
+  color: #475d4b;
+  font-weight: 600;
 `;
 export const ProductButton = styled.button`
   font-size: 16px;

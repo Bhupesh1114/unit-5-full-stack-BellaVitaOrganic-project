@@ -1,0 +1,76 @@
+{
+  "bestSellerData": [
+    {
+      "id": 1,
+      "Title": "Exfoliate Face And Body Scrub Grit 75g",
+      "Description": "Gentle Exfoliation, Nourishing & Skin Brightening",
+      "ImageUrl": "https://cdn.shopify.com/s/files/1/0054/6665/2718/products/Exfoliate-01_1_700x.jpg?v=1655010286",
+      "Price": 193,
+      "StkPrice": 275,
+      "Rating": 4.5
+    },
+    {
+      "id": 2,
+      "Title": "EyeLift Under Eye Cream 20gm",
+      "Description": "Repairs Dark Circles, Puffy Eyes & Wrinkles",
+      "ImageUrl": "https://cdn.shopify.com/s/files/1/0054/6665/2718/products/EyeLift-01_4ac1ff22-cbb1-4b18-8b9e-11204b255113_700x.jpg?v=1652340587",
+      "Price": 228,
+      "StkPrice": 325,
+      "Rating": 4.7
+    },
+    {
+      "id": 3,
+      "Title": "C-Glow Face Wash, 100ml",
+      "Description": "De-Tan & Brightening",
+      "ImageUrl": "https://cdn.shopify.com/s/files/1/0054/6665/2718/products/C-GlowFaceWash-01_2_700x.jpg?v=1652340405",
+      "Price": 174,
+      "StkPrice": 249,
+      "Rating": 4.7
+    },
+    {
+      "id": 4,
+      "Title": "Anti Acne, Pimple Scar Spots Removal 50gm",
+      "Description": "Pimple Scar Removal & Skin Clarifying",
+      "ImageUrl": "https://cdn.shopify.com/s/files/1/0054/6665/2718/products/Anti-AcneFaceGel-01_0b665e08-c71f-409a-82ef-10b68c67e453_700x.jpg?v=1651699935",
+      "Price": 279,
+      "StkPrice": 399,
+      "Rating": 4.8
+    },
+    {
+      "id": 5,
+      "Title": "Luxury Perfume Gift Set For Man - 4x20ml",
+      "Description": "Eau De Parfum",
+      "ImageUrl": "https://cdn.shopify.com/s/files/1/0054/6665/2718/products/ManBox-01_700x.jpg?v=1652421642",
+      "Price": 424,
+      "StkPrice": 849,
+      "Rating": 4.8
+    },
+    {
+      "id": 6,
+      "Title": "Ayurvedic Kumkumadi Face Oil, 30ml",
+      "Description": "Skin Brightening & Hydrating Oil For Skin",
+      "ImageUrl": "https://cdn.shopify.com/s/files/1/0054/6665/2718/products/Kumkumadi-Face-Oil-01_700x.jpg?v=1652341175",
+      "Price": 419,
+      "StkPrice": 599,
+      "Rating": 4.7
+    },
+    {
+      "id": 7,
+      "Title": "GLOWEY 3 In 1 Face Pack, Scrub,100g",
+      "Description": "Deep Cleansing, Hydrating & Skin Reviving",
+      "ImageUrl": "https://cdn.shopify.com/s/files/1/0054/6665/2718/products/Glowey-01_700x.jpg?v=1652169511",
+      "Price": 279,
+      "StkPrice": 399,
+      "Rating": 4.7
+    },
+    {
+      "id": 8,
+      "Title": "CEO MAN LUXURY PERFUME, 100ml",
+      "Description": "Eau De Parfum",
+      "ImageUrl": "https://cdn.shopify.com/s/files/1/0054/6665/2718/products/CEOMAN-01_cf6cf834-200c-42bf-81a7-e80dbee17c7d_700x.jpg?v=1652421979",
+      "Price": 449,
+      "StkPrice": 899,
+      "Rating": 4.6
+    }
+  ]
+}

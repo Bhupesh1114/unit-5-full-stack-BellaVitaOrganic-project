@@ -1,11 +1,11 @@
-
-import './App.css';
+import "./App.css";
+import HomePage from "./Comp/HomePage/HomePage";
 
 function App() {
   return (
-    <div className="App">
-     <h1>Hello React</h1>
-    </div>
+    <>
+      <HomePage />
+    </>
   );
 }
 

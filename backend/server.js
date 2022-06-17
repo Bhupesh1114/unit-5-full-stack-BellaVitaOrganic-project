@@ -4,15 +4,18 @@ const dotenv = require('dotenv');
 const morgan = require('morgan');
 const cors = require('cors');
 const app = express();
+const productRoutes = require("./routes/product");
 
 
 dotenv.config();
 
+app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
-app.use(morgan("dev"));
+app.use("/products",productRoutes);
+
 
 const PORT = process.env.PORT || 8080;
 

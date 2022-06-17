@@ -5,8 +5,10 @@ const productSchema = new mongoose.Schema({
     title: String,
     category: {
         type: String,
-        enum : ["skincare", "eyecare", "facecare","bodycare"]
+        enum : ["skincare", "haircare","bodycare","perfume"]
     },
+    subCategory: [String],
+    quantity: String,
     price: Number,
     stkPrice: Number,
     rating: Number,

@@ -1,61 +1,93 @@
 import React from "react";
 import "./cartpage.css";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+import { RiDeleteBinLine } from "react-icons/ri";
+import { useSelector } from "react-redux";
+import { addProduct } from "../../redux/AddTocart/AddToCart";
 
 export const Cartpage = () => {
+  // const data = useSelector(addProduct);
+  // console.log(data)
+  const navigate = useNavigate();
+  const moveToAddres = () => {
+    navigate("/address");
+  };
   return (
     <div>
-      <div className="main_div_cart">
-        <div className="yourcart_continueshopping">
-          <p>Your Cart</p>
-          <Link className="continueshop" to={""}>
-            Continue shopping >
-          </Link>
+      <div className="cartTop">
+        <div className="yourCart">Your Cart</div>
+        <div className="ConShop">
+          <p className="contShop">Continue Shopping</p>
         </div>
-
-        <div className="Prod_quan_subto">
-          <div className="prod">Product</div>
-          <div className="qyan">QUANTITY</div>
-          <div className="total">TOTAL</div>
-        </div>
-
-        <div className="product_cart">
-          <div className="imgdiv"></div>
-
-          <div className="pro_info_div">
-            <h3 className="name_of_prod">
-              Face Spots & Marks Reduction Combo{" "}
-            </h3>
-            <h3 className="pro_price">Rs. 679.00</h3>
+      </div>
+      <div className="CartTitle">
+        <div className="productT">Product</div>
+        <div className="quantT">Quantity</div>
+        <div className="priceT">Total</div>
+      </div>
+      <div className="mainProductDiv">
+        <div className="ProductDiv">
+          <div className="ProductItems">
+            <div className="productImg">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0054/6665/2718/products/NicoLips-01_77788ac8-4061-459a-bfb5-f5b5068c1dfa_300x.jpg?v=1652340499"
+                alt=""
+              />
+            </div>
+            <div className="productDetails">
+              <p>NicoLips Lip Bightening Scrub, 20gm</p>
+              <p>₹ 399</p>
+            </div>
           </div>
-
-          <div className="inc_dec_dele">
-          <div className="add_delete_box"> 
-        <div className="add-minus-quantity">
-          <i className="fas fa-minus minus"></i>
-     
-          <input type="text" placeholder="12"  />
-          <i className="fas fa-plus add" ></i>
-          
+          <div className="ProductQuantity">
+            <div className="Quantdiv">
+              <AiOutlineMinus />
+              <p>1</p>
+              <AiOutlinePlus />
+            </div>
+            <div className="QuantityDelete">
+              <RiDeleteBinLine />
+            </div>
           </div>
-          </div>
-          <div className="remove-item">
-          <i
-            className="fas fa-trash-alt remove"
-          ></i>
-        </div>
-          </div>
-
-          <div className="total_price_div">
-            <h3 className="toltalprice">Rs. 679.00</h3>
+          <div className="ProductTotal">
+            <p>₹ 399</p>
           </div>
         </div>
-
-        <div>
-          <p>Subtotal Rs. 679.00</p>
-
-          <button >Check out</button>
+        <div className="ProductDiv">
+          <div className="ProductItems">
+            <div className="productImg">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0054/6665/2718/products/NicoLips-01_77788ac8-4061-459a-bfb5-f5b5068c1dfa_300x.jpg?v=1652340499"
+                alt=""
+              />
+            </div>
+            <div className="productDetails">
+              <p>NicoLips Lip Bightening Scrub, 20gm</p>
+              <p>₹ 399</p>
+            </div>
+          </div>
+          <div className="ProductQuantity">
+            <div className="Quantdiv">
+              <AiOutlineMinus />
+              <p>1</p>
+              <AiOutlinePlus />
+            </div>
+            <div className="QuantityDelete">
+              <RiDeleteBinLine />
+            </div>
+          </div>
+          <div className="ProductTotal">
+            <p>₹ 399</p>
+          </div>
         </div>
+      </div>
+      <div className="checkOut">
+        <p>Subtotal ₹ 897</p>
+        <p className="tax">Tax included. Shipping calculated at checkout.</p>
+        <button className="CheckButton" onClick={moveToAddres}>
+          Check out
+        </button>
       </div>
     </div>
   );

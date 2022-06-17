@@ -1,152 +1,109 @@
-.main_div_cart {
-  /* border: 1px solid red; */
-  width: 80%;
-  margin: auto;
-  margin-top: 5%;
-}
-
-.main_div_cart p {
-  font-size: 35px;
-  font-weight: 500px;
-}
-
-.yourcart_continueshopping {
-  /* border: 1px solid red; */
+.cartTop {
   display: flex;
   justify-content: space-between;
+  
 }
-.continueshop {
-  margin-top: 45px;
-  text-underline-offset: 0.3rem;
-  text-decoration-thickness: 0.1rem;
-  --font-body-family: var(--segoe-ui);
-  letter-spacing: 0.02rem;
-  line-height: 2rem;
-  color: black;
-  text-decoration: none;
+.yourCart {
+  font-size: 40px;
+  margin-left: 10px;
 }
-
-.Prod_quan_subto {
-  border: 1px solid #e7e7e7;
-  height: 20px;
-  display: flex;
-  background-color: #fafafa;
+.ConShop {
+  margin-right: 20px;
 }
-.prod {
-  color: #5a5a5a;
-}
-.qyan {
-  margin-left: 60%;
-  color: #5a5a5a;
-  font-size: 13px;
-  margin-top: 3px;
-}
-.total {
-  margin-left: 25%;
-  color: #5a5a5a;
-  font-size: 13px;
-  margin-top: 3px;
-}
-
-.product_cart {
-  /* border: 1px solid red; */
-  height: 190px;
-  display: flex;
-  background-color: #fafafa;
-}
-
-.imgdiv {
-  border: 1px solid red;
-  height: 135px;
-  width: 135px;
-  margin-top: 2%;
-  margin-left: 5px;
-}
-
-.pro_info_div {
-  /* border: 1px solid red; */
-  height: 80px;
-  margin-top: 2%;
-  margin-left: 2%;
-}
-
-.name_of_prod {
-  font-size: 15px;
-  font-family: Museo Sans, sans-serif;
-  font-weight: 500;
-}
-
-.pro_price {
-    color: #7f7c7c;
-    font-size: 12px;
-    font-weight: 500;
-  }
-
-  .inc_dec_dele {
-    /* border: 1px solid red; */
-    height: 50px;
-    width: 16%;
-    margin-left: 23%;
-    margin-top: 2%;
-    display: flex;
-  }
-
-  .add_delete_box{
-    border: 1px solid #acd583;
-    margin-left: 5px;
-    width: 100%;
-    align-content: center;
-  }
-
-
-.add-minus-quantity button {
-  border: none;
-  background-color: transparent;
-  outline: none;
+.contShop {
+  border-bottom: 1px solid grey;
   cursor: pointer;
-  margin-top: 4px;
 }
-i{
-    /* border: 1px solid red; */
-    margin-left: 12px;
+.contShop:hover {
+  border-bottom: 3px solid grey;
 }
 
-.add-minus-quantity input {
-  width: 4rem;
-  height: 3rem;
-  border: 0.141rem solid var(--primary-color);
-  margin-left:10px;
-  box-sizing: border-box;
-  font-size: 0.8rem;
+.CartTitle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-weight: 300;
+  font-size: 16px;
+}
+.productT {
+  flex: 17;
+  margin-left: 15px;
+}
+.quantT {
+  flex: 9;
+}
+.priceT {
+  flex: 1;
+}
+.mainProductDiv {
+  border-bottom: 1px solid #e5f0da;
+  border-top: 1px solid #e5f0da;
+}
+.ProductDiv {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.ProductItems {
+  display: flex;
+  gap: 20px;
+  flex: 17;
+}
+.productImg {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #e5f0da;
+  margin-left: 30px;
+}
+
+.ProductQuantity {
+  flex: 9;
+  display: flex;
+  gap: 20px;
+}
+
+.Quantdiv {
+  width: 180px;
+  height: 60px;
+  border: 1px solid #e5f0da;
+  display: flex;
+  align-items: center;
   text-align: center;
-  border-radius: 0.5rem;
-  outline: none;
-  background-color: transparent;
+  justify-content: space-around;
+}
+.QuantityDelete {
+  background-color: #e5f0da;
+  width: 22px;
+  height: 30px;
+  padding: 10px;
+  margin-top: 8px;
 }
 
-.remove-item{
-    /* border: 1px solid red; */
-    margin-left: 5%;
-    width: 34%;
-    height: 45px;
-    margin-top: 2px;
-    background-color: #67e77f;
+.ProductTotal {
+  flex: 1;
+  margin-top: -10px;
 }
 
-.remove-item i{
-    margin-top: 13px;
-    margin-left: 14px;
+.checkOut{
+  align-items: right;
+  text-align: right;
+  margin-right: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
-
-.total_price_div {
-  /* border: 1px solid red; */
-  margin-left: 18%;
-  height: 34px;
-  margin-top: 2%;
+.tax{
+  font-size: 16px;
+  font-weight: 300;
 }
+.CheckButton{
+  padding: 20px;
+  border: none;
+  background-color: #475d4b;
+  color: #fff;
+  width:420px;
+  border-radius:5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
 
-.toltalprice {
-  font-size: 15px;
-  font-weight: 500;
-  color: #7f7c7c;
 }

@@ -459,3 +459,16 @@ label {
   font-weight: 500;
   margin-left: 58px;
 }
+
+.addProductDiv{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 0px
+}
+.productImg{
+  display: flex;
+  
+}

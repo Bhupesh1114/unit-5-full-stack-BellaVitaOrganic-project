@@ -103,4 +103,5 @@ export const ProductButton = styled.button`
   border-radius: 5px;
   border: none;
   cursor: pointer;
+  margin-left: 0px;
 `;

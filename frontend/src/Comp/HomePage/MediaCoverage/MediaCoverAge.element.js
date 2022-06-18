@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MediaCDiv = styled.div`
   width: 100%;
-  margin-top: 20px;
+  margin: 50px 0px;
 `;
 
 export const MediaCHeadDiv = styled.div`

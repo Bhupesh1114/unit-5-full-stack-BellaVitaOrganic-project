@@ -85,7 +85,7 @@ const BestSeller = () => {
                     onClick={() => {
                       dispatch(
                         addProduct({
-                          e,
+                          ...e,
                           quantity,
                           price: e.Price * quantity,
                         })

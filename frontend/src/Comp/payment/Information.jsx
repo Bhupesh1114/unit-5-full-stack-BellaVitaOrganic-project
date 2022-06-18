@@ -3,8 +3,12 @@ import "./information.css";
 import img from "./img/Bellavitaorganic.png";
 import { Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
+import { useSelector } from "react-redux";
 
 export const Information = () => {
+  const data = useSelector((state) => state.cart.products);
+  const total = useSelector((state) => state.cart.total);
+  console.log(data);
   return (
     <div>
       <div className="imgbox">
@@ -276,6 +280,21 @@ export const Information = () => {
         </div>
 
         <div className="box2">
+          {data &&
+            data.map((e) => {
+              return (
+                <div className="addProductDiv">
+                  <div className="productImg">
+                    <img src={e.ImageUrl} alt="" />
+                    <p>{e.Title}</p>
+                  </div>
+                  <div>
+                    <p>₹{e.Price}</p>
+                  </div>
+                </div>
+              );
+            })}
+
           <hr className="line2" />
           <div className="cupondiv">
             <form>

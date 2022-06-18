@@ -1,7 +1,10 @@
-
+.seconddiv{
+padding: 80px 0px;
+}
 
 .styled.mainFooter{
     background-color: aquamarine;
+    
 }
 .firstdiv{
     /* border: 1px solid black; */
@@ -170,8 +173,7 @@ input{
     width:231px;
     height: 31px;
 }
-button{
-   margin-left:-100px;
+.SubmitButton{
    width: 133px;
    height: 41px;
    background-color: rgb(2, 72, 2);
@@ -190,6 +192,7 @@ button{
   }
   .footercopywright {
     text-align: center !important;
+  
     margin: -10px;
    
   }

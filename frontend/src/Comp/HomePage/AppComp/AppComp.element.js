@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const AppContainer = styled.div`
   width: 100%;
   position: relative;
+  margin-bottom: 80px;
 `;
 export const AppContainerTop = styled.div`
   height: 170px;
@@ -34,18 +35,21 @@ export const AppContainerBottom = styled.div`
 export const StoreAppDiv = styled.div`
   display: flex;
   margin: auto;
-  margin-left: 720px;
+  margin-left: 650px;
   padding: 30px;
-  gap: 50px;
+  gap: 0px;
 `;
 
 export const PlayStoreImg = styled.img`
   width: 200px;
+  height: 80%;
   cursor: pointer;
 `;
 export const AppleStoreImg = styled.img`
   width: 200px;
   cursor: pointer;
+  height: 80%;
+  margin-right: 330px;
 `;
 export const AppMobileDiv = styled.div`
   position: absolute;
@@ -54,6 +58,7 @@ export const AppMobileDiv = styled.div`
 `;
 export const AppMobileImg = styled.img`
   z-index: 1;
+  height: 80%;
   transition: all 0.4s ease-out;
   &:hover {
     transform: scale(1.1);

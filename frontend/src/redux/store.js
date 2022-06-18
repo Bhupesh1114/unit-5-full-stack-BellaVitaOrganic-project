@@ -3,6 +3,6 @@ import addToCartReducer from "./AddTocart/AddToCart";
 
 export default configureStore({
   reducer: {
-    addToCart: addToCartReducer,
+    cart: addToCartReducer,
   },
 });

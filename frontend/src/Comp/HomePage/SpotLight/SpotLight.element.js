@@ -43,6 +43,7 @@ export const SpotLImg = styled.img`
 export const SpotLTitle = styled.p`
   height: 100%;
   font-size: 14px;
+  margin-left: 0;
   padding: 15px;
   background-color: #e5f0da;
   text-align: center;

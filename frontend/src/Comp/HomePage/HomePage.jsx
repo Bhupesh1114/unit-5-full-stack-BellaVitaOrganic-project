@@ -21,6 +21,7 @@ import AppComp from "./AppComp/AppComp";
 const HomePage = () => {
   return (
     <HomePageContainer>
+
       <ImgSlider />
       <SliderBottomDiv>
         <SliderBottomImg src={SliderBottom} alt="" />

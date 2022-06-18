@@ -1,28 +1,25 @@
 
-.logo{
-    width: 60px;
-    height: 60px;
-    margin-right: 15px;
+.logo {
+  width: 60px;
+  height: 60px;
+  margin-right: 15px;
 }
-.icons{
-    margin-right: 33px;
-}
-
-li:hover{
-    background-color: rgb(211, 241, 220);
-    text-decoration: underline;
-}
-li{
-    font-size: 15px;
-}
-.navbarhead{
-    height:41px;
-    background-color:rgb(232, 248, 233) ;
+.icons {
+  margin-right: 33px;
 }
 
-
-
-
+li:hover {
+  background-color: rgb(211, 241, 220);
+  text-decoration: underline;
+}
+li {
+  font-size: 15px;
+}
+.navbarhead {
+  height: 41px;
+  background-color: rgb(232, 248, 233);
+  margin-top: -20px;
+}
 
 /* 
 

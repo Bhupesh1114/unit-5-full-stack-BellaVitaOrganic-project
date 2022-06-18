@@ -3,14 +3,14 @@ import "./cartpage.css";
 import { useNavigate } from "react-router-dom";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { RiDeleteBinLine } from "react-icons/ri";
-import { useSelector } from "react-redux";
-import { addProduct } from "../../redux/AddTocart/AddToCart";
+import { useDispatch, useSelector } from "react-redux";
+import { addProduct, increment } from "../../redux/AddTocart/AddToCart";
 
 export const Cartpage = () => {
   const [tquantity, setTQuantity] = useState(1);
   const data = useSelector((state) => state.cart.products);
   const total = useSelector((state) => state.cart.total);
-
+  const dispatch = useDispatch();
   // const handleQuantity = (type) => {
   //   // if (type === "dec") {
   //   //   quantity > 1 && setQuantity(quantity - 1);
@@ -61,7 +61,7 @@ export const Cartpage = () => {
                       <p>{tquantity}</p>
                       <AiOutlinePlus
                         onClick={() => {
-                         setTQuantity(tquantity + 1);
+                          dispatch(increment(ele.id));
                         }}
                       />
                     </div>
@@ -78,7 +78,7 @@ export const Cartpage = () => {
           })}
       </div>
       <div className="checkOut">
-        <p className="Subtotal">Subtotal ₹ {tquantity*total}</p>
+        <p className="Subtotal">Subtotal ₹ {tquantity * total}</p>
         <p className="tax">Tax included. Shipping calculated at checkout.</p>
         <button className="CheckButton" onClick={moveToAddres}>
           Check out

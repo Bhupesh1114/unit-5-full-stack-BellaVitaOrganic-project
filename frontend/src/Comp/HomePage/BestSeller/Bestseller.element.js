@@ -83,6 +83,7 @@ export const StkPriceP = styled.p`
 
 export const RatingDiv = styled.div`
   display: flex;
+  justify-content: center;
   align-items: center;
   text-align: center;
   gap: 5px;

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { useDispatch, useSelector } from "react-redux";
-import { addProduct, increment } from "../../redux/AddTocart/AddToCart";
+// import { addProduct, increment } from "../../redux/AddTocart/AddToCart";
 
 export const Cartpage = () => {
   const [tquantity, setTQuantity] = useState(1);
@@ -53,24 +53,16 @@ export const Cartpage = () => {
                   </div>
                   <div className="ProductQuantity">
                     <div className="Quantdiv">
-                      <AiOutlineMinus
-                        onClick={() => {
-                          setTQuantity(tquantity - 1);
-                        }}
-                      />
-                      <p>{tquantity}</p>
-                      <AiOutlinePlus
-                        onClick={() => {
-                          dispatch(increment(ele.id));
-                        }}
-                      />
+                      <AiOutlineMinus />
+                      <p>1</p>
+                      <AiOutlinePlus />
                     </div>
                     <div className="QuantityDelete">
                       <RiDeleteBinLine />
                     </div>
                   </div>
                   <div className="ProductTotal">
-                    <p>₹ {tquantity * ele.Price}</p>
+                    <p>₹ 1</p>
                   </div>
                 </div>
               </>
@@ -78,7 +70,7 @@ export const Cartpage = () => {
           })}
       </div>
       <div className="checkOut">
-        <p className="Subtotal">Subtotal ₹ {tquantity * total}</p>
+        <p className="Subtotal">Subtotal ₹ 1</p>
         <p className="tax">Tax included. Shipping calculated at checkout.</p>
         <button className="CheckButton" onClick={moveToAddres}>
           Check out

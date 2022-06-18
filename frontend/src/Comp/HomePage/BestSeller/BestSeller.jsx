@@ -25,7 +25,7 @@ import {
   StkPriceP,
 } from "./Bestseller.element";
 import { useEffect } from "react";
-import { addProduct } from "../../../redux/AddTocart/AddToCart";
+// import { addProduct } from "../../../redux/AddTocart/AddToCart";
 
 const BestSeller = () => {
   const [product, setProduct] = useState([]);
@@ -38,6 +38,14 @@ const BestSeller = () => {
     slidesToShow: 4,
     slidesToScroll: 4,
   };
+  //  onClick={() => {
+  //                     dispatch(
+  //                       addProduct({
+  //                         ...e,
+  //                         quantity,
+  //                       })
+  //                     );
+  //                   }}
 
   useEffect(() => {
     axios.get("http://localhost:5500/bestSellerData").then(({ data }) => {
@@ -78,22 +86,10 @@ const BestSeller = () => {
                     </PriceDiv>
                     <RatingDiv>
                       <RatingP>{e.Rating}</RatingP>
-                      <AiTwotoneStar />
+                      <AiTwotoneStar style={{ marginTop: "-15px" }} />
                     </RatingDiv>
                   </PriceAndratingDiv>
-                  <ProductButton
-                    onClick={() => {
-                      dispatch(
-                        addProduct({
-                          ...e,
-                          quantity,
-                          price: e.Price * quantity,
-                        })
-                      );
-                    }}
-                  >
-                    ADD TO CART
-                  </ProductButton>
+                  <ProductButton>ADD TO CART</ProductButton>
                 </BestSellerProduct>
               </BestMainDiv>
             );

@@ -5,7 +5,7 @@ import "./navbar.css";
 
 function Navbar() {
 
-  const navquantity = useSelector((state) => state.cart.quantity);
+  // const navquantity = useSelector((state) => state.cart.quantity);
   return (
     <div>
       <nav class="navbarhead">
@@ -23,10 +23,14 @@ function Navbar() {
                 <button
                   style={{
                     width: "110px",
-                    height: "auto",
+                    padding: "5px",
                     marginLeft: "11px",
                     borderRadius: "6px",
-                    margin: "5px",
+                    fontSize: "14px",
+                    color: "white",
+                    fontWeight:"500",
+                    backgroundColor: "#475d4b",
+                    border: "none"
                   }}
                 >
                   Shop Now
@@ -138,7 +142,7 @@ function Navbar() {
               <Link className="navbar-brand position-relative" to="/cart">
                 <i class="bi bi-bag"></i>
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
-                  {navquantity}
+                  1
                 </span>
               </Link>
 

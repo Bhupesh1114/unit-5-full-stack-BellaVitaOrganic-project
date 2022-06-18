@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BestSeller from "./BestSeller/BestSeller";
 import ReactPlayer from "react-player";
 import {
@@ -17,11 +17,20 @@ import FindSolutions from "./FindSolutions/FindSolutions";
 import MediaCoverAge from "./MediaCoverage/MediaCoverAge";
 import BellaCash from "./Bellacash/BellaCash";
 import AppComp from "./AppComp/AppComp";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
+  const navigate = useNavigate();
+  const token = useSelector((state) => state.logSinReducer.token);
+
+  useEffect(() => {
+    if (!token) {
+      navigate("/signup");
+    }
+  });
   return (
     <HomePageContainer>
-
       <ImgSlider />
       <SliderBottomDiv>
         <SliderBottomImg src={SliderBottom} alt="" />

@@ -1,0 +1,201 @@
+
+.logo{
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+}
+.icons{
+    margin-right: 33px;
+}
+
+li:hover{
+    background-color: rgb(211, 241, 220);
+    text-decoration: underline;
+}
+li{
+    font-size: 15px;
+}
+.navbarhead{
+    height:41px;
+    background-color:rgb(232, 248, 233) ;
+}
+
+
+
+
+
+/* 
+
+.header{
+    height:150px;   
+    width:100%;
+    position: relative;
+   
+}
+.header2{
+    height:40px;
+    margin-top: 2%;
+    text-align: center;
+    
+   
+}
+.row1{
+    height:80px;
+    width:100%;
+    display:flex;
+    text-align: center;
+   
+}
+.account{
+    display: flex;
+    margin-top: 20%;
+    margin-left: 50%;
+    text-decoration: none;
+  
+}
+.head1{
+    font-weight: 500;
+    margin-top: 60%;
+}
+.cart{
+    display: flex;
+    margin-top: 70%;
+    margin-left: 250%;
+    text-decoration: none;
+    color: black;
+}
+.head2{
+     margin-top: -3%;
+    font-weight: 500;
+  
+}
+.row2{
+    display: flex;
+    justify-content: space-evenly;    
+}
+.Linkcss{
+
+    text-decoration: none;
+    color: rgb(29, 22, 22);
+    font-size: 14px;  
+    cursor: pointer;
+   
+}
+.Linkcss:hover{
+    
+    text-align: center;
+    background-color:rgb(207, 205, 205);
+
+  
+}
+.row{
+    height: 30px;
+    width: 100%;
+    background-color: #F2F2F2;
+}
+.logo{
+    height:60px;
+    width:100%;
+    margin-Left:25%;
+    margin-Top:12%;
+}
+.search{
+    display:flex;
+    width:30%;
+    margin-Left:20%;
+}
+.row3{
+    width: 100%;
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;  
+    align-items: center;
+    margin-top: -12px;  
+    padding: 20px 0px ;
+}
+.row3 p{
+    margin-bottom:0px;
+}
+
+.row3>div{
+    display: flex;
+    justify-content: center;
+}
+.para{
+    height:40px;
+    width: 100%;
+    background-color: #CCCCCC;
+    margin-top: -15px;
+    padding-top: 5px;   
+}
+.Linkcss1{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+
+}
+.para:hover{
+background-color: #eeee;
+
+}
+.box1{
+position: relative;
+
+}
+.box1:hover div{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+       
+}
+.accdropdown{
+    position: relative;
+    cursor: pointer;
+  
+}
+.accdropdown:hover div{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+   
+    
+}
+.butt1{
+    width:80%;
+    height: 30px;
+    margin-top: 3%;
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    margin-left: 2%;
+}
+.butt2{
+    width:80%;
+    height: 30px;
+    margin-top: 3%;
+    color: rgb(12, 11, 11);
+    background-color: white;
+    font-size: 20px;
+}
+.cartdropdown{
+    position: relative;
+    cursor: pointer;
+}
+.cartdropdown p{
+    position: absolute;
+    background-color:#000;
+    color: #fff;
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    font-size:14px;
+}
+
+
+.cartdropdown:hover div{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease-in-out;
+} */

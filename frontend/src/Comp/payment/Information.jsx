@@ -1,6 +1,5 @@
 import React from "react";
 import "./information.css";
-import img from "./img/Bellavitaorganic.png";
 import { Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import { useSelector } from "react-redux";
@@ -14,10 +13,7 @@ export const Information = () => {
   }, 0);
   return (
     <div>
-      <div className="imgbox">
-        <img src={img} alt="" />
-      </div>
-
+      
       <div className="informationbox">
         <div className="box1">
           <div className="paprg">
@@ -261,7 +257,7 @@ export const Information = () => {
               </div>
             </div>
             <div>
-                <button onClick={()=>navigate("/payment")}>CHECKOUT NOW</button>
+                <button onClick={()=>navigate("/payment")} className="btn checkout">CHECKOUT NOW</button>
             </div>
           </div>
           <hr className="line" />

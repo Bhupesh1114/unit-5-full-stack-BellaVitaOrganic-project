@@ -42,22 +42,22 @@ function Navbar() {
       </nav>
       <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
-          <div>
-            <Link to="">
+          <div className="d-flex">
+            <Link to="/">
               <img
                 src="https://cdn.shopify.com/s/files/1/0054/6665/2718/files/BVO_220_x_220@2x.png?v=1653304683"
                 alt="navbarlogo"
                 className="logo"
               />
             </Link>
-            <Link to="">
+            <Link to="/">
               <img
                 src="https://cdn.shopify.com/s/files/1/0054/6665/2718/files/Brave_220_x_220@2x.png?v=1653304701"
                 alt="navbarlogo"
                 className="logo"
               />
             </Link>
-            <Link to="">
+            <Link to="/">
               <img
                 src="https://cdn.shopify.com/s/files/1/0054/6665/2718/files/BVL_220_x_220@2x.png?v=1653304721"
                 alt="navbarlogo"
@@ -82,32 +82,32 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link to="/products/all-products" className="nav-link mx-3" aria-current="page">
+                <Link to="/products/all-products" className="nav-link mx-2" aria-current="page">
                   SHOP ALL
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/products/newArrival" className="nav-link mx-3" aria-current="page">
+                <Link to="/products/newArrival" className="nav-link mx-2" aria-current="page">
                   NEW ARRIVALS
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/products/bestseller" className="nav-link mx-3" aria-current="page">
+                <Link to="/products/bestseller" className="nav-link mx-2" aria-current="page">
                   BESTSELLERS
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="" className="nav-link mx-3" aria-current="page">
+                <Link to="" className="nav-link mx-2" aria-current="page">
                   SKIN CARE
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="" className="nav-link mx-3" aria-current="page">
+                <Link to="" className="nav-link mx-2" aria-current="page">
                   HAIR CARE
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="" className="nav-link mx-3" aria-current="page">
+                <Link to="" className="nav-link mx-2" aria-current="page">
                   BODY CARE
                 </Link>
               </li>

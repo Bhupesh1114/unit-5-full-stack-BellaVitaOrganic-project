@@ -4,7 +4,7 @@ import SocialMedia from "./SocialMedia";
 import styled from "./Footer.module.css";
 const Footer = () => {
   return (
-    <>
+    <div style={{ marginTop:"100px"}}>
       <div className={styled.seconddiv}>
         <div className={styled.secondDivfirstchild}>
           <h5>ONLINE PRESENCE</h5>
@@ -98,7 +98,7 @@ const Footer = () => {
           </Row>
         </Container>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -10,7 +10,7 @@ export const registerUser = (payload) => (dispatch) => {
   payload.name = name;
   ["firstName", "lastName"].forEach((elem) => delete payload[elem]);
   axios
-    .post("http://localhost:8080/register", payload)
+    .post("https://web-16-bellavita.herokuapp.com/register", payload)
     .then((response) => {
       console.log(response);
       dispatch({ type: REGISTER_USER, payload: response.data });
@@ -20,7 +20,7 @@ export const registerUser = (payload) => (dispatch) => {
 
 export const login = (payload) => (dispatch) => {
   axios
-    .post("http://localhost:8080/login", payload)
+    .post("https://web-16-bellavita.herokuapp.com/login", payload)
     .then((response) => {
       console.log(response);
       localStorage.setItem("token", response.data.token);

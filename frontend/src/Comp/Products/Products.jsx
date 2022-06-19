@@ -16,7 +16,7 @@ const Products = () => {
   
   useEffect(()=>{
       const getData = async()=>{
-            let res = await axios.get(`http://localhost:8080/products/${category}?sortBy=${type}`);
+            let res = await axios.get(`https://web-16-bellavita.herokuapp.com/products/${category}?sortBy=${type}`);
             setData(res.data);
       }
       getData();

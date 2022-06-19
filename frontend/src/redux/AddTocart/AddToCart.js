@@ -24,10 +24,10 @@
 
 export const increment = (data, id) => (dispatch) => {
   const incrementData = data.map((product, index) => {
-    if (product.id === id) {
+    if (product._id === id) {
       return {
         ...product,
-        quantity: (product.quantity += 1),
+        cartqty: (product.cartqty += 1),
       };
     } else {
       return product;
@@ -37,10 +37,10 @@ export const increment = (data, id) => (dispatch) => {
 };
 export const decrement = (data, id) => (dispatch) => {
   const decrementData = data.map((product, index) => {
-    if (product.id === id) {
+    if (product._id === id) {
       return {
         ...product,
-        quantity: (product.quantity -= 1),
+        cartqty: (product.cartqty -= 1),
       };
     } else {
       return product;
@@ -49,24 +49,35 @@ export const decrement = (data, id) => (dispatch) => {
   dispatch({ type: "decrement", payload: decrementData });
 };
 
-export const addToCart = (data, id) => (dispatch) => {};
+export const addToCart = (product) => (dispatch)=>{
+     const cartProduct = {...product, cartqty: 1};
+     dispatch({type:"addproduct", payload: cartProduct});
+};
 
 const initialState = {
-  products: [],
+  cart: [],
+  loading: false,
+  error: ""
   // total: 0,
 };
 
 const cartReducer = (state = initialState, { type, payload }) => {
   switch (type) {
+    case "addproduct":
+      return{
+          ...state, cart: [...state.cart, payload]
+      };
     case "increment":
       return {
-        products: payload,
+        ...state, cart: payload
       };
     case "decrement":
       return {
-        products: payload,
+        ...state, cart: payload,
       };
     default:
       return state;
   }
 };
+
+export default cartReducer;

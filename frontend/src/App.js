@@ -6,6 +6,9 @@ import { Information } from './Comp/payment/Information';
 import Navbar from "../src/Comp/Navbar/Navbar"
 import Footer from "../src/Comp/Footer/Footer";
 import Products from '../src/Comp/Products/Products';
+import Signup from '../src/Comp/Login_Signup/Signup';
+import Login from '../src/Comp/Login_Signup/Login'
+import Checkout from '../src/Comp/Checkout/Checkout'
 
 function App() {
   return (
@@ -15,9 +18,10 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/cart" element={<Cartpage />} />
         <Route path="/address" element={<Information />} />
-      
+        <Route path="/signup" element={<Signup/>}/>
+        <Route path="/login" element={<Login />}/>
         <Route path="/products/:category" element={<Products />} />
-        
+        <Route path="/payment" element={<Checkout/>}/>
         <Route path="*" element={<HomePage/>}/>
       </Routes>
       <Footer />

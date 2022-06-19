@@ -5,7 +5,7 @@ import "./navbar.css";
 
 function Navbar() {
 
-  // const navquantity = useSelector((state) => state.cart.quantity);
+  const navquantity = useSelector((state) => state.cartReducer.cart);
   return (
     <div>
       <nav class="navbarhead">
@@ -82,17 +82,17 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link to="" className="nav-link mx-3" aria-current="page">
+                <Link to="/products/all-products" className="nav-link mx-3" aria-current="page">
                   SHOP ALL
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="" className="nav-link mx-3" aria-current="page">
+                <Link to="/products/newArrival" className="nav-link mx-3" aria-current="page">
                   NEW ARRIVALS
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="" className="nav-link mx-3" aria-current="page">
+                <Link to="/products/bestseller" className="nav-link mx-3" aria-current="page">
                   BESTSELLERS
                 </Link>
               </li>
@@ -142,7 +142,7 @@ function Navbar() {
               <Link className="navbar-brand position-relative" to="/cart">
                 <i class="bi bi-bag"></i>
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
-                  1
+                {navquantity.length}
                 </span>
               </Link>
 

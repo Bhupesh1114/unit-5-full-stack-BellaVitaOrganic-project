@@ -4,25 +4,20 @@ import { useNavigate } from "react-router-dom";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { useDispatch, useSelector } from "react-redux";
-// import { addProduct, increment } from "../../redux/AddTocart/AddToCart";
+import { increment, decrement } from "../../redux/AddTocart/AddToCart";
 
 export const Cartpage = () => {
-  const [tquantity, setTQuantity] = useState(1);
-  const data = useSelector((state) => state.cart.products);
-  const total = useSelector((state) => state.cart.total);
+  const data = useSelector((state) => state.cartReducer.cart);
   const dispatch = useDispatch();
-  // const handleQuantity = (type) => {
-  //   // if (type === "dec") {
-  //   //   quantity > 1 && setQuantity(quantity - 1);
-  //   // } else {
-  //   //   setQuantity(quantity + 1);
-  //   // }
-  // };
 
   const navigate = useNavigate();
   const moveToAddres = () => {
     navigate("/address");
   };
+
+ const total = data.reduce((a,b)=>{
+    return a +(b.cartqty*b.price);
+  },0);
   return (
     <div>
       <div className="cartTop">
@@ -41,28 +36,28 @@ export const Cartpage = () => {
           data.map((ele) => {
             return (
               <>
-                <div className="ProductDiv" key={ele.id}>
+                <div className="ProductDiv" key={ele._id}>
                   <div className="ProductItems">
                     <div className="productImg">
-                      <img src={ele.ImageUrl} alt="" className="cartImg" />
+                      <img src={ele.imageUrl} alt="" className="cartImg" />
                     </div>
                     <div className="productDetails">
-                      <p>{ele.Title}</p>
-                      <p>₹ {ele.Price}</p>
+                      <p>{ele.title}</p>
+                      <p>₹ {ele.price}</p>
                     </div>
                   </div>
                   <div className="ProductQuantity">
                     <div className="Quantdiv">
-                      <AiOutlineMinus />
-                      <p>1</p>
-                      <AiOutlinePlus />
+                      <AiOutlineMinus   onClick={()=>dispatch(decrement(data,ele._id))}/>
+                      <p>{ele.cartqty}</p>
+                      <AiOutlinePlus onClick={()=>dispatch(increment(data,ele._id))}/>
                     </div>
                     <div className="QuantityDelete">
                       <RiDeleteBinLine />
                     </div>
                   </div>
                   <div className="ProductTotal">
-                    <p>₹ 1</p>
+                    <p>₹{ele.cartqty*ele.price}</p>
                   </div>
                 </div>
               </>
@@ -70,7 +65,7 @@ export const Cartpage = () => {
           })}
       </div>
       <div className="checkOut">
-        <p className="Subtotal">Subtotal ₹ 1</p>
+        <p className="Subtotal">Subtotal ₹ {total}</p>
         <p className="tax">Tax included. Shipping calculated at checkout.</p>
         <button className="CheckButton" onClick={moveToAddres}>
           Check out

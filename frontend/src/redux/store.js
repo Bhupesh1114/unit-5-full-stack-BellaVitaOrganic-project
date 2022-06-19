@@ -6,8 +6,10 @@ import {
 } from "redux";
 import thunk from "redux-thunk";
 import logSinReducer from "../Comp/Login_Signup/login_signup.reducer";
+import cartReducer from './AddTocart/AddToCart'
 const rootReducers = combineReducers({
   logSinReducer,
+  cartReducer
 });
 
 const composeEnhancers =

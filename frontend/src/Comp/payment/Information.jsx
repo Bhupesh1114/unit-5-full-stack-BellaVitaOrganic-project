@@ -4,11 +4,14 @@ import img from "./img/Bellavitaorganic.png";
 import { Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import { useSelector } from "react-redux";
+import {useNavigate} from 'react-router-dom'
 
 export const Information = () => {
-  const data = useSelector((state) => state.cart.products);
-  const total = useSelector((state) => state.cart.total);
-  console.log(data);
+  const data = useSelector((state) => state.cartReducer.cart);
+  const navigate = useNavigate();
+  const total = data.reduce((a, b) => {
+    return a + b.cartqty * b.price;
+  }, 0);
   return (
     <div>
       <div className="imgbox">
@@ -19,16 +22,16 @@ export const Information = () => {
         <div className="box1">
           <div className="paprg">
             <div>
-              <button>Cart ></button>
+              <button>{`Cart >`} </button>
             </div>
             <div>
-              <button>Information ></button>
+              <button>{`Information >`}</button>
             </div>
             <div>
-              <button>Shipping ></button>
+              <button>{`Shipping >`}</button>
             </div>
             <div>
-              <button>Payment ></button>
+              <button>{`Payment >`}</button>
             </div>
           </div>
 
@@ -258,7 +261,7 @@ export const Information = () => {
               </div>
             </div>
             <div>
-              <button className="continue">Continue to shipping</button>
+                <button onClick={()=>navigate("/payment")}>CHECKOUT NOW</button>
             </div>
           </div>
           <hr className="line" />
@@ -285,11 +288,11 @@ export const Information = () => {
               return (
                 <div className="addProductDiv">
                   <div className="productImg">
-                    <img src={e.ImageUrl} alt="" />
-                    <p>{e.Title}</p>
+                    <img src={e.imageUrl} alt="" />
+                    <p>{e.title}</p>
                   </div>
                   <div>
-                    <p>₹{e.Price}</p>
+                    <p>₹{e.price}</p>
                   </div>
                 </div>
               );
@@ -318,7 +321,7 @@ export const Information = () => {
 
           <div className="amtdiv">
             <div className="total">Subtotal</div>
-            <div className="amt">₹209.30</div>
+            <div className="amt">₹{total}</div>
           </div>
           <div className="Shippingdiv">
             <div className="ship">Shipping </div>
@@ -332,7 +335,7 @@ export const Information = () => {
               <p>Total</p>
             </div>
             <div className="price">
-              <p>₹209.30</p>
+              <p>₹{total}</p>
             </div>
           </div>
         </div>

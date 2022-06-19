@@ -20,29 +20,65 @@ const createProduct = async(req,res)=>{
 
 const getProduct = async(req,res)=>{
     const { category } = req.params;
+    const {sortBy} = req.query;
+    console.log(sortBy);
     try{
 
         if(category==="all-products"){
-            const products = await productModel.find();
-            res.status(200).json(products);
+            if(sortBy==="price-asc"){
+                const products = await productModel.find().sort({price: 1});
+                res.status(200).json(products);
+            }
+            else if(sortBy==="price-dsc"){
+                const products = await productModel.find().sort({price: -1});
+                res.status(200).json(products);
+            }
+            else{
+                const products = await productModel.find();
+                res.status(200).json(products);
+            }
+            
         }
         else if(category==="skincare" || category==="bodycare" || category==="haircare" || category==="perfume"){
-             const products = await productModel.find({category: category});
-             if(products.length===0){
-                res.status(404).json({message:"Products not found"})
-            }
-            else{
+            if(sortBy==="price-asc"){
+                const products = await productModel.find({category: category}).sort({price: 1});
                 res.status(200).json(products);
             }
+            else if(sortBy==="price-dsc"){
+                const products = await productModel.find({category: category}).sort({price: -1});
+                res.status(200).json(products);
+            }
+            else{
+                const products = await productModel.find({category: category});
+                if(products.length===0){
+                    res.status(404).json({message:"Products not found"})
+                }
+                else{
+                    res.status(200).json(products);
+                }
+            }
+       
         }
         else{
-            const products = await productModel.find({ subCategory: category});
-            if(products.length===0){
-                res.status(404).json({message:"Products not found"})
-            }
-            else{
+            if(sortBy==="price-asc"){
+                const products = await productModel.find({subcategory: category}).sort({price: 1});
                 res.status(200).json(products);
             }
+            else if(sortBy==="price-dsc"){
+                const products = await productModel.find({subcategory: category}).sort({price: -1});
+                res.status(200).json(products);
+            }
+            else{
+                const products = await productModel.find({ subCategory: category});
+                if(products.length===0){
+                    res.status(404).json({message:"Products not found"})
+                }
+                else{
+                    res.status(200).json(products);
+                }
+            }
+           
+            
         }
         
         

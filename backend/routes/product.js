@@ -7,4 +7,5 @@ const productRouter = Router();
 productRouter.post("/",createProduct);
 productRouter.get("/:category",getProduct);
 
+
 module.exports = productRouter;

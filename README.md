@@ -41,6 +41,11 @@ Implemented searching ,review product and buying functionalities with online pay
 ### Installation Requirements
 
 * Fork the repo, then clone it
-* install all dependencies, with 'npm install'
+* install all dependencies, with 'npm install
 * start the server 'npm run dev'
 * start the application 'npm start'
+
+
+
+###### Home Page
+![Screenshot (7)](https://user-images.githubusercontent.com/98808183/180653174-8eafc9af-cc9b-4891-a528-ccd7538f2249.png)
